@@ -26,6 +26,15 @@ export class UserService {
     });
   }
 
+  async getUserbyIdUsingRelations(userId: number){
+    return this.userRepository.findOne({
+      where: {
+        id: userId,
+      },
+      relations: ['addresses'],
+    })
+  }
+
   async getAllUser() {
     return this.userRepository.find();
   }
