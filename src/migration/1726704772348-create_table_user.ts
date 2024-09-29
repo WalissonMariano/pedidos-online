@@ -7,11 +7,11 @@ export class CreateTableUser1726704772348 implements MigrationInterface {
             CREATE TABLE public.user (
                 id integer NOT NULL,
                 name character varying NOT NULL,
-                email  character varying NOT NULL,
-                cpf  character varying NOT NULL,
+                email character varying NOT NULL,
+                cpf character varying NOT NULL,
                 type_user int NOT NULL,
-                phone  character varying NOT NULL,
-                password  character varying NOT NULL,
+                phone character varying NOT NULL,
+                password character varying NOT NULL,
                 created_at timestamp without time zone DEFAULT now() NOT NULL,
                 updated_at timestamp without time zone DEFAULT now() NOT NULL,
                 primary key (id)
