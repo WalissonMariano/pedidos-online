@@ -6,8 +6,8 @@ import { Column,
         ManyToOne,
         JoinColumn
  } from "typeorm";
-import { User } from "src/user/entities/user.entity";
-import { City } from "src/city/entities/city.entity";
+import { User } from "../../user/entities/user.entity";
+import { City } from "../../city/entities/city.entity";
 
 @Entity({name: 'address'})
 export class Address {
