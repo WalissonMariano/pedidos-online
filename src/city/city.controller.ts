@@ -15,4 +15,5 @@ export class CityController {
     ): Promise<City[]> {
         return this.cityService.getAllCitiesByStateId(stateId);
     }
+   
 }
