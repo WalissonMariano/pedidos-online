@@ -21,6 +21,20 @@ export class CategoryService {
         return categories;
     }
 
+    async getCategoryById(categoryId: number): Promise<Category> {
+        const category = await this.categoryRepository.findOne({
+            where: {
+                id: categoryId,
+            },
+        });
+
+        if (!category) {
+            throw new NotFoundException(`Category id:  ${categoryId} not found`);
+        }
+
+        return category;
+    }
+
     async getCategoryByName(name: string): Promise<Category> {
         const category = await this.categoryRepository.findOne({
             where: {
