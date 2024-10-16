@@ -13,6 +13,7 @@ import { JwtModule } from '@nestjs/jwt';
 import { CategoryModule } from './category/category.module';
 import { ProductModule } from './product/product.module';
 import { CartModule } from './cart/cart.module';
+import { CartProductModule } from './cart-product/cart-product.module';
 
 @Module({ 
   imports: [ConfigModule.forRoot({
@@ -39,7 +40,8 @@ import { CartModule } from './cart/cart.module';
   AuthModule,
   CategoryModule,
   ProductModule,
-  CartModule],
+  CartModule,
+  CartProductModule],
   controllers: [],
   providers: [{
     provide: APP_GUARD,
